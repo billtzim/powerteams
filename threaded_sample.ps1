@@ -61,7 +61,7 @@ ForEach ($Job in $Jobs)
     }
 }
 
-$totalStatusQ.Substring(1).Split("|") | ForEach {
+$totalStatusQ.Substring(1).Split("|") | ForEach-Object {
     &cmd /c $mysqlexePath -s --default-character-set=utf8 -D pclabs_freepcs -h db.ccf.auth.gr -u YYYYYY -pXXXXXX -e "$pcstatusout" | Out-Null
 }
 
