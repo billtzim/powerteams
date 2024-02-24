@@ -1,7 +1,8 @@
 ﻿Connect-MicrosoftTeams
 
 # Define the path to your CSV file
-$csvFilePath = "d:\tests\powercsv\simple_courses_codes_econ.csv"
+#$csvFilePath = "d:\tests\powercsv\simple_courses_codes_econ.csv"
+$csvFilePath = "simple_courses_codes_econ.csv"
 
 # Read the CSV file
 $data = Import-Csv -Path $csvFilePath
@@ -39,7 +40,7 @@ foreach ($row in $data) {
 }
 
 # Define the path to save the results CSV file
-$resultsFilePath = "d:\tests\powercsv\SAVED_RESULTS_simple_courses_codes_econ.csv"
+$resultsFilePath = "SAVED_RESULTS_simple_courses_codes_econ.csv"
 
 # Export results to a CSV file
 $results | Export-Csv -Path $resultsFilePath -NoTypeInformation
