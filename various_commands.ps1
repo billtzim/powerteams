@@ -1,7 +1,7 @@
 ﻿Install-Module -Name MicrosoftTeams
 
 $Username = 'teleconf.econ@uth.gr'
-$Password = 'utheECON'
+$Password = 'xxxxxx'
 $pass = ConvertTo-SecureString -AsPlainText $Password -Force
 
 $SecureString = $pass
