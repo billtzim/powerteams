@@ -23,10 +23,10 @@ $createTeam =
     $group = New-Team -DisplayName $TeamTitle -Description $TeamDescr -AllowGiphy $false -AllowDeleteChannels $false -AllowCreateUpdateRemoveTabs $false -AllowCreateUpdateRemoveConnectors $false -AllowCreateUpdateChannels $false -AllowAddRemoveApps $false
 
     IF($group.GroupId) {
-        Add-TeamUser -GroupId $group.GroupId -User "vtzimourtos@o365.uth.gr" -Role Owner
+        Add-TeamUser -GroupId $group.GroupId -User $TeamOwner -Role Owner
         return $group.GroupID + ',' + $TeamTitle + ',' + $TeamDescr + ',' + $TeamOwner
     } else {
-        return 'ERROR WHILE CREATING' + $delimiter + $TeamTitle + $delimiter + $TeamDescr + $delimiter + $TeamOwner
+        return 'ERROR WHILE CREATING' + ',' + $TeamTitle + ',' + $TeamDescr + ',' + $TeamOwner
     }
 }
 
